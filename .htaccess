@@ -1,0 +1,14 @@
+# Menangani halaman error 404
+ErrorDocument 404 /404.html
+
+# Mencegah akses ke direktori folder (Security)
+Options -Indexes
+
+# Mengaktifkan engine untuk manipulasi URL
+RewriteEngine On
+
+# Menghapus ekstensi .html dari URL (Opsional, agar terlihat pro)
+# Contoh: nusantarapasir.com/harga.html jadi nusantarapasir.com/harga
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
