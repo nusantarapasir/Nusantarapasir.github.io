@@ -573,12 +573,6 @@ body.dark {
   margin-bottom: 0.8rem;
 }
 
-.cp-7 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 14px;
-  font-weight: 500;
-}
-
 .cp-8 {
   border: none;
   background-color: transparent;
@@ -816,12 +810,6 @@ body.dark {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 10px;
-}
-
-.crd-5 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 14px;
-  font-weight: 350;
 }
 /* END CARD PRODUK 1 */
 
@@ -2350,10 +2338,6 @@ body.dark {
   /* CARD PRODUK 1 */
   .crd-4 h1 {
     font-size: 14px;
-  }
-
-  .crd-5 {
-    font-size: 12px;
   }
   /* CARD PRODUK 1 */
 
