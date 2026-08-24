@@ -48,18 +48,34 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.querySelector("i")?.classList.toggle("fa-xmark");
   });
 
-  // IMG CAROUSEL
-  const slides = document.querySelectorAll(".slide");
-  let slideIndex = 0;
+  // CAROUSEL
+  const slides = document.querySelectorAll(".cl-3");
+  let index = 0;
+  const SLIDE_DURATION = 12000;
 
-  function changeSlide() {
-    slides[slideIndex].classList.remove("active");
-    slideIndex = (slideIndex + 1) % slides.length;
-    slides[slideIndex].classList.add("active");
+  function showSlide(i) {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+
+      const img = slide.querySelector("img");
+      if (img) {
+        img.style.animation = "none";
+        img.offsetHeight;
+        img.style.animation = "";
+      }
+
+      slide.querySelector(".cl-5")?.blur();
+    });
+
+    slides[i]?.classList.add("active");
   }
 
-  if (slides.length > 1) {
-    setInterval(changeSlide, 8000);
+  if (slides.length > 0) {
+    showSlide(0);
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, SLIDE_DURATION);
   }
 
   // SLIDER
